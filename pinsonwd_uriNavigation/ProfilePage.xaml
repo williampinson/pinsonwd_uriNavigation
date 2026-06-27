@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="pinsonwd_uriNavigation.ProfilePage"
+             Title="ProfilePage"
+             Shell.NavBarIsVisible="False">
+    <Grid HorizontalOptions="Center"
+          ColumnDefinitions="Auto"
+          RowDefinitions="Auto,Auto,Auto,Auto"
+          RowSpacing="20"
+          Margin="0,40">
+        <Label x:Name="LblUsername"
+               Grid.Row="0"
+               HorizontalOptions="Center"/>
+        <Label x:Name="LblEmail"
+               Grid.Row="1"
+               HorizontalOptions="Center"/>
+        <Label x:Name="LblConfirmation"
+               Grid.Row="2"
+               HorizontalOptions="Center"/>
+        <Button Text="Sign Out" 
+                x:Name="BtnSignout" 
+                HorizontalOptions="Center"
+                Grid.Row="3"
+                Clicked="BtnSignout_Clicked" />
+    </Grid>
+</ContentPage>

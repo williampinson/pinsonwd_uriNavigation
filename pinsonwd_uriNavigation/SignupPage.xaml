@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="pinsonwd_uriNavigation.SignupPage"
+             Title="SignupPage"
+             Shell.NavBarIsVisible="False">
+    <Grid HorizontalOptions="Center"
+          ColumnDefinitions="Auto,*"
+          RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto"
+          ColumnSpacing="20"
+          Margin="0,40">
+
+        <Label Text="Username" 
+           Grid.Column="0" 
+           Grid.Row="0" 
+           VerticalOptions="Center"
+           HorizontalOptions="End"/>
+        <Entry x:Name="Username" 
+           Placeholder="Username" 
+           Grid.Column="1"
+           Grid.Row="0" />
+
+        <Label Text="Email" 
+           Grid.Column="0" 
+           Grid.Row="1" 
+           VerticalOptions="Center"
+           HorizontalOptions="End"/>
+        <Entry x:Name="Email" 
+           Placeholder="JohnDoe@email.com" 
+           Grid.Column="1"
+           Grid.Row="1"
+           Keyboard="Email"/>
+
+        <Label Text="Password" 
+           Grid.Column="0" 
+           Grid.Row="2" 
+           VerticalOptions="Center"
+           HorizontalOptions="End"/>
+        <Entry x:Name="Password" 
+           Placeholder="Password" 
+           IsPassword="True" 
+           Grid.Column="1"
+           Grid.Row="2" />
+
+        <Label Text="Confirm Password" 
+           Grid.Column="0" 
+           Grid.Row="3" 
+           VerticalOptions="Center"
+           HorizontalOptions="End"/>
+        <Entry x:Name="PasswordConfirm" 
+           Placeholder="Confirm Password" 
+           IsPassword="True" 
+           Grid.Column="1"
+           Grid.Row="3" />
+
+        <Label Text=""
+           x:Name="LblValidationError"
+           Grid.ColumnSpan="2"
+           Grid.Row="4"
+           HorizontalOptions="Start"
+           TextColor="red"
+           HorizontalTextAlignment="Start"
+           Padding="0,0,0,20"/>
+
+        <Button Text="Sign Up"
+            Grid.ColumnSpan="2"
+            Grid.Row="5" 
+            HorizontalOptions="Center"
+            x:Name="BtnSignup"
+            Clicked="BtnSignup_Clicked"/>
+
+    </Grid>
+</ContentPage>
